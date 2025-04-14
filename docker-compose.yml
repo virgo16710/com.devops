@@ -1,0 +1,30 @@
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=fhyw*430
+    ports:
+      - "1433:1433"
+    networks:
+      - dev-network
+
+  webapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: com-devops-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sqlserver
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=Hospital;User Id=sa;Password=fhyw*430;TrustServerCertificate=true;
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    driver: bridge

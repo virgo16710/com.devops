@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\com.devops.modelos\com.devops.modelos.csproj" />
-    <ProjectReference Include="..\com.devops.persistencia\com.devops.persistencia.csproj" />
+    <ProjectReference Include="..\com.devops.Modelos\com.devops.Modelos.csproj" />
+    <ProjectReference Include="..\com.devops.Persistencia\com.devops.Persistencia.csproj" />
   </ItemGroup>
 
 </Project>

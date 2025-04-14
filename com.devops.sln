@@ -3,14 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.persistencia", "com.devops.persistencia\com.devops.persistencia.csproj", "{871F20B8-873E-180C-A2FF-99C847D82251}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.Tests", "com.devops.Tests\com.devops.Tests.csproj", "{B61830E7-105C-14BF-07E3-400F46376694}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.modelos", "com.devops.modelos\com.devops.modelos.csproj", "{C94C0621-993D-4D82-8E06-CAB74AB261DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{D107F4C8-89CC-BEA8-D3D7-CA6B7733353D}"
 	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
 		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
@@ -18,24 +15,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.API", "com.devop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.Aplicacion", "com.devops.Aplicacion\com.devops.Aplicacion.csproj", "{73D97082-B9ED-45D4-9FA6-0AC4223FA953}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.Persistencia", "com.devops.Persistencia\com.devops.Persistencia.csproj", "{871F20B8-873E-180C-A2FF-99C847D82251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.Modelos", "com.devops.Modelos\com.devops.Modelos.csproj", "{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{871F20B8-873E-180C-A2FF-99C847D82251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{871F20B8-873E-180C-A2FF-99C847D82251}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{871F20B8-873E-180C-A2FF-99C847D82251}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{871F20B8-873E-180C-A2FF-99C847D82251}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B61830E7-105C-14BF-07E3-400F46376694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B61830E7-105C-14BF-07E3-400F46376694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B61830E7-105C-14BF-07E3-400F46376694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B61830E7-105C-14BF-07E3-400F46376694}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C94C0621-993D-4D82-8E06-CAB74AB261DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C94C0621-993D-4D82-8E06-CAB74AB261DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C94C0621-993D-4D82-8E06-CAB74AB261DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C94C0621-993D-4D82-8E06-CAB74AB261DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E3145AB-C167-D332-728B-391D6D33F59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E3145AB-C167-D332-728B-391D6D33F59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E3145AB-C167-D332-728B-391D6D33F59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,6 +37,14 @@ Global
 		{73D97082-B9ED-45D4-9FA6-0AC4223FA953}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73D97082-B9ED-45D4-9FA6-0AC4223FA953}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73D97082-B9ED-45D4-9FA6-0AC4223FA953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{871F20B8-873E-180C-A2FF-99C847D82251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871F20B8-873E-180C-A2FF-99C847D82251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871F20B8-873E-180C-A2FF-99C847D82251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871F20B8-873E-180C-A2FF-99C847D82251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

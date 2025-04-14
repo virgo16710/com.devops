@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\com.devops.modelos\com.devops.modelos.csproj" />
+    <ProjectReference Include="..\com.devops.Modelos\com.devops.Modelos.csproj" />
   </ItemGroup>
 
 </Project>
