@@ -20,10 +20,11 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restaurar dependencias
-      run: dotnet restore
+      run: dotnet restore ./com.devops.sln
 
-    - name: Compilar
-      run: dotnet build --no-restore --configuration Release
+    - name: Compilar solución
+      run: dotnet build ./com.devops.sln --no-restore --configuration Release
 
     - name: Ejecutar tests
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./com.devops.sln --no-build --verbosity normal
+
