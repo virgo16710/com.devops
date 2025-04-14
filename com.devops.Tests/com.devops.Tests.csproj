@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\com.devops.Api\com.devops.API.csproj" />
     <ProjectReference Include="..\com.devops.persistencia\com.devops.persistencia.csproj" />
-    <ProjectReference Include="..\com.devops\com.devops.csproj" />
   </ItemGroup>
 
   <ItemGroup>

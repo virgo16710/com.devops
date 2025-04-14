@@ -1,8 +1,6 @@
 using com.devops.persistencia;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +16,10 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDBContext>();
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(com.devops.Aplicacion.Paises.Queries.GetAllPaisesQuery).Assembly);
+});
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

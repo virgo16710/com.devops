@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using com.devops.modelos;
+using Microsoft.EntityFrameworkCore;
 
 namespace com.devops.persistencia
 {
@@ -7,9 +8,10 @@ namespace com.devops.persistencia
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
         }
-        //public DbSet<Cliente> Clientes { get; set; }
-        //public DbSet<Producto> Productos { get; set; }
-        //public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Usuario> DBUsuario { get; set; }
+        public DbSet<Comuna> DBComuna { get; set; }
+        public DbSet<Pais> Pais { get; set; }
+        public DbSet<Region> Region { get; set; }
         //public DbSet<PedidoDetalle> PedidoDetalles { get; set; }
         //public DbSet<Proveedor> Proveedores { get; set; }
         //public DbSet<Usuario> Usuarios { get; set; }

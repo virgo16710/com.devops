@@ -8,11 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.5.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.15" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\com.devops.modelos\com.devops.modelos.csproj" />
+    <ProjectReference Include="..\com.devops.persistencia\com.devops.persistencia.csproj" />
   </ItemGroup>
 
 </Project>
