@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace com.devops.modelos
 {
     public class Region
     {
+        [Key]
         public Guid Id_region { get; set; }
         public string Nombre { get; set; }
         [ForeignKey("Id_pais")]
