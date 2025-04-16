@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace com.devops.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("Pais")]
     public class PaisController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -15,12 +15,21 @@ namespace com.devops.API.Controllers
             _mediator = mediator;
         }
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAll()
         {
             var paises = await _mediator.Send(new GetAllPaisesQuery());
             return Ok(paises);
         }
-
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPais(Guid id)
+        {
+            var pais = await _mediator.Send(new GetPaisIDQuery { Id_Pais = id });
+            if (pais == null)
+            {
+                return NotFound(new { message = "Pais no encontrado" });
+            }
+            return Ok(pais);
+        }
 
         [HttpPost]
         public async Task<IActionResult> Post(CreatePaisCommand command)

@@ -7,7 +7,8 @@ services:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=fhyw*430
     ports:
-      - "1433:1433"
+      - "8080:8081"
+
     networks:
       - dev-network
 
@@ -17,11 +18,15 @@ services:
       dockerfile: Dockerfile
     container_name: com-devops-api
     ports:
-      - "8080:8080"
+      - "44300:443"
+    environment:
+      - ASPNETCORE_Kestrel__Certificates__Default_Password=Psga_16710
+      - ASPNETCORE_Kestrel__Certificates__Default_Path=/https/aspnetcert.pfx
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=Hospital;User Id=sa;Password=fhyw*430;TrustServerCertificate=true;
+    volumes:
+      - ./certs/aspnetcert.pfx:/https/aspnetcert.pfx 
     depends_on:
       - sqlserver
-    environment:
-      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=Hospital;User Id=sa;Password=fhyw*430;TrustServerCertificate=true;
     networks:
       - dev-network
 

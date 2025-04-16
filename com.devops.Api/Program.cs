@@ -1,4 +1,5 @@
 using com.devops.persistencia;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,11 +25,14 @@ builder.Services.AddMediatR(cfg =>
 });
 var app = builder.Build();
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwagger();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
+    c.RoutePrefix = string.Empty; // Para que Swagger esté en la raíz
+});
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
