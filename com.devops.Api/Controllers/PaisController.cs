@@ -24,9 +24,9 @@ namespace com.devops.API.Controllers
         public async Task<IActionResult> GetPais(Guid id)
         {
             var pais = await _mediator.Send(new GetPaisIDQuery { Id_Pais = id });
-            if (pais == null)
+            if (pais.Id_pais == Guid.Empty )
             {
-                return NotFound(new { message = "Pais no encontrado" });
+                return NotFound();
             }
             return Ok(pais);
         }
