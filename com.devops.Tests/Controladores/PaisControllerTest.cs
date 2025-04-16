@@ -1,7 +1,9 @@
-﻿using com.devops.Aplicacion.Paises.Queries;
+﻿using com.devops.Aplicacion.Paises.Commdand;
+using com.devops.Aplicacion.Paises.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using System.Text.Json;
 
 namespace com.devops.Tests.Controladores
 {
@@ -35,5 +37,37 @@ namespace com.devops.Tests.Controladores
             var result = await controller.GetPais(Guid.Empty);
             Assert.IsType<NotFoundResult>(result);
         }
+        [Fact]
+        public async Task Post_ReturnsOkResult_WhenPaisIsCreated()
+        {
+            // Arrange
+            var mockMediator = new Mock<IMediator>();
+            mockMediator
+                .Setup(m => m.Send<Unit>((IRequest<Unit>)It.IsAny<CreatePaisCommand>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(Unit.Value); // porque tu handler no devuelve nada
+
+            var controller = new com.devops.API.Controllers.PaisController(mockMediator.Object);
+
+            var command = new CreatePaisCommand
+            {
+                Nombre = "Ecuador"
+            };
+
+            // Act
+            var result = await controller.Post(command);
+
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result);
+
+            // Convertir el resultado a JSON, luego a diccionario
+            var json = JsonSerializer.Serialize(okResult.Value);
+            var dict = JsonSerializer.Deserialize<Dictionary<string, string>>(json);
+
+            Assert.Equal("Pais creado correctamente", dict["message"]);
+
+
+            mockMediator.Verify(m => m.Send(It.IsAny<CreatePaisCommand>(), It.IsAny<CancellationToken>()), Times.Once);
+        }
+
     }
 }
