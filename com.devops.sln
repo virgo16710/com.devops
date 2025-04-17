@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.Persistencia", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.devops.Modelos", "com.devops.Modelos\com.devops.Modelos.csproj", "{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "com.devops.Presentacion", "com.devops.Presentacion\com.devops.Presentacion.esproj", "{A8F875F8-A590-9F7E-C43A-DB7A904E1B96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,12 @@ Global
 		{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F0C2846-E3DE-32EE-5AE7-DBB12C424515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F875F8-A590-9F7E-C43A-DB7A904E1B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F875F8-A590-9F7E-C43A-DB7A904E1B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F875F8-A590-9F7E-C43A-DB7A904E1B96}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A8F875F8-A590-9F7E-C43A-DB7A904E1B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F875F8-A590-9F7E-C43A-DB7A904E1B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F875F8-A590-9F7E-C43A-DB7A904E1B96}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

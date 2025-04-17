@@ -9,5 +9,6 @@ namespace com.devops.modelos
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaModificacion { get; set; }
         public bool Estado { get; set; }
+        public Guid ComunaId { get; set; }
     }
 }

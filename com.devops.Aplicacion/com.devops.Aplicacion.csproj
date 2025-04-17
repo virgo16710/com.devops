@@ -15,4 +15,8 @@
     <ProjectReference Include="..\com.devops.Persistencia\com.devops.Persistencia.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Usuarios\Queries\" />
+  </ItemGroup>
+
 </Project>
