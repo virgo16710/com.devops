@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
        string dominio = builder.Configuration["Dominio:Url"];
        cor.WithOrigins(
            dominio,
-           "http://localhost:7141")
+           "http://localhost:44300")
        .AllowAnyMethod()
        .AllowAnyHeader();
    })
@@ -30,13 +30,15 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 
 builder.Services.AddIdentity<Usuario, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDBContext>();
+
 builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssembly(typeof(com.devops.Aplicacion.Paises.Queries.GetAllPaisesQuery).Assembly);
     cfg.RegisterServicesFromAssembly(typeof(com.devops.Aplicacion.Paises.Queries.GetPaisIDQuery).Assembly);
     cfg.RegisterServicesFromAssembly(typeof(com.devops.Aplicacion.Paises.Commdand.CreatePaisCommand).Assembly);
     cfg.RegisterServicesFromAssembly(typeof(com.devops.Aplicacion.Usuarios.Command.CreateUserCommand).Assembly);
-    
+    cfg.RegisterServicesFromAssembly(typeof(com.devops.Aplicacion.Usuarios.Command.LoginUserCommand).Assembly);
+
 });
 var app = builder.Build();
 // Configure the HTTP request pipeline.

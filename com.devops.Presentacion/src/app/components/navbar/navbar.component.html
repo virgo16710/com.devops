@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">DevOpsApp</a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#" (click)="toggleLogin()">Iniciar sesión</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" (click)="toggleRegistro()">Registrarse</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid">
+  <app-navbar></app-navbar>
+</div>
+<app-login *ngIf="mostrarLogin"></app-login>
+<app-registro *ngIf="mostrarRegistro"></app-registro>
+

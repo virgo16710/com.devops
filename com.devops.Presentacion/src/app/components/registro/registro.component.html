@@ -1,0 +1,13 @@
+<div class="container mt-3 p-4 border rounded bg-light shadow w-50">
+  <h4 class="mb-3">Registro</h4>
+  <form (ngSubmit)="registrar()">
+    <input [(ngModel)]="usuario.nombre" name="nombre" class="form-control mb-2" placeholder="Nombre" required>
+    <input [(ngModel)]="usuario.apellido" name="apellido" class="form-control mb-2" placeholder="Apellido" required>
+    <input [(ngModel)]="usuario.userName" name="userName" class="form-control mb-2" placeholder="Usuario" required>
+    <input [(ngModel)]="usuario.email" name="email" class="form-control mb-2" placeholder="Email" required>
+    <input [(ngModel)]="usuario.password" name="password" type="password" class="form-control mb-2" placeholder="Contraseña" required>
+    <input [(ngModel)]="usuario.comunaId" name="comunaId" class="form-control mb-3" placeholder="ID de Comuna (opcional)">
+    <button class="btn btn-success w-100">Registrarse</button>
+  </form>
+</div>
+

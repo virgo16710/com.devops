@@ -1,0 +1,9 @@
+<div class="container mt-3 p-3 border rounded bg-light shadow w-50">
+  <h5>Login</h5>
+  <form (ngSubmit)="login()">
+    <input [(ngModel)]="usuario.userName" name="userName" class="form-control mb-2" placeholder="Usuario" required>
+    <input [(ngModel)]="usuario.password" name="password" class="form-control mb-2" type="password" placeholder="Contraseña" required>
+    <button class="btn btn-primary w-100">Ingresar</button>
+  </form>
+</div>
+
